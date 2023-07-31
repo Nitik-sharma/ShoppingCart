@@ -69,10 +69,12 @@ function addData(data) {
             <div class="card-body">
               <div class="card-body rate">
                 <h5 class="card-title">$${item.price}</h5>
+                <h4 class="card-title">${item.id}</h4>
+              </div>
                 <p class="card-text">S,M,L</p>
               </div>
 
-             <button type="button" class="btn btn-dark">Add Cart</button>
+             <button type="button" class="btn btn-dark" onclick="addValue(this)">Add Cart</button>
 
             </div>
           </div>
@@ -82,13 +84,30 @@ function addData(data) {
 }
 console.log(arr);
 
-// function addValue(item) {
-//   console.log("value", item);
-// }
+function addValue(element) {
+  const parentEle = element.parentElement;
+  const Grandparent = parentEle.parentElement;
+  const imageLink = Grandparent.querySelector("img").src;
 
-// const addCartHandler = (items) => {
-//   console.log(JSON.stringify(items));
-// };
+  const price = parentEle.querySelector("h5").innerText;
+  const Id = parentEle.querySelector("h4").innerText;
+
+  var cartArr = localStorage.getItem("cartObj");
+  var obj = {
+    image: imageLink,
+    itemPrice: price,
+    itemId: Id,
+  };
+  console.log(obj);
+  var arr = [];
+  if (cartArr) {
+    const tempObj = JSON.parse(cartArr);
+    arr = tempObj.arr;
+  }
+  arr.push(obj);
+  var cartObj = { arr };
+  localStorage.setItem("cartObj", JSON.stringify(cartObj));
+}
 
 ApplyFilter.addEventListener("click", () => {
   console.log("Hii", PriceRange);
