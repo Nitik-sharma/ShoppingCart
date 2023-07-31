@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping App</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="myShop">
+        <h1>MeShop.</h1>
+      </div>
+      <div class="links">
+        <a href="./shop.html">Home</a>
+        <a href="./login.html">Login</a>
+        <a href="./singinPage.html">Signup</a>
+        <a href="">My Cart</a>
+        <a href="./profile.html">Profile</a>
+      </div>
+    </nav>
+    <div class="content">
+      <h1>MeShop.</h1>
+      <p>Your Shop ,Pruches which You Want</p>
+    </div>
+    <div class="main">
+      <div class="buttons">
+        <button id="log-in">Login</button>
+
+        <button id="signUp">Signup</button>
+      </div>
+      <div class="images">
+        <img src="undraw_web_shopping_re_owap 1.png" alt="" />
+      </div>
+    </div>
+  </body>
+  <script>
+    const login = document.getElementById("log-in");
+    const signUp = document.getElementById("signUp");
+
+    login.addEventListener("click", () => {
+      window.location.pathname = "login.html";
+    });
+
+    signUp.addEventListener("click", () => {
+      window.location.pathname = "singinPage.html";
+    });
+  </script>
+</html>
