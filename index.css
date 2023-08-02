@@ -3,7 +3,10 @@
   padding: 0%;
   box-sizing: border-box;
 }
-
+.link {
+  display: none;
+  position: relative;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -65,4 +68,50 @@ nav {
 .images img {
   max-width: 100%;
   height: 500px;
+}
+
+.ancher {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  color: #ce1313;
+  background: transparent;
+  border: 1px solid gray;
+  text-align: center;
+}
+.ancher a {
+  /* display: none; */
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-left: 2ex;
+  padding: 1rem;
+  /* color: #fff; */
+  margin-top: 3em;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .link {
+    display: block;
+    margin-right: 1rem;
+  }
+  .links {
+    display: none;
+  }
+
+  .link:hover {
+    .ancher {
+      display: block;
+      height: 40vh;
+      background-color: #ce1313;
+      color: #fff;
+    }
+    .ancher a {
+      padding: 3rem;
+    }
+  }
 }

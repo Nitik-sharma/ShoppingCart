@@ -11,6 +11,10 @@ nav {
   background-color: #000;
   color: #fff;
 }
+/* .link {
+  display: none;
+  position: relative;
+} */
 
 .myShop {
   font-size: 2rem;
@@ -147,6 +151,9 @@ main {
   width: 100%;
   height: 50px;
 }
+.input {
+  display: flex;
+}
 
 /* 
 ----------------     Singup CSS ----------------------- */
@@ -191,4 +198,54 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.link {
+  display: none;
+  position: relative;
+}
+.ancher {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  color: #ce1313;
+  background: transparent;
+  border: 1px solid gray;
+  text-align: center;
+}
+/* .ancher a {
+ 
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-left: 2ex;
+  padding: 1rem;
+ 
+  margin-top: 3em;
+} */
+@media only screen and (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-lg {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 20px;
+    margin-top: 2rem;
+    border-radius: 4px;
+    place-items: center;
+  }
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #All,
+  #men,
+  #women,
+  #Jewellery,
+  #Electronics {
+    width: 300px;
+  }
 }

@@ -17,7 +17,6 @@ const Jewellery = document.getElementById("Jewellery");
 const electronic = document.getElementById("Electronics");
 const addBtn = document.querySelector(".btn");
 const ApplyFilter = document.getElementById("apply");
-const PriceRange = document.querySelectorAll("priceRange");
 
 men.addEventListener("click", () => {
   const menData = filterData("men's clothing");
@@ -74,7 +73,7 @@ function addData(data) {
                 <p class="card-text">S,M,L</p>
               </div>
 
-             <button type="button" class="btn btn-dark" onclick="addValue(this)">Add Cart</button>
+             <button type="button" class="btn btn-dark" onclick="addValue(this)" style="width:100%">Add Cart</button>
 
             </div>
           </div>
@@ -106,9 +105,18 @@ function addValue(element) {
   }
   arr.push(obj);
   var cartObj = { arr };
+
   localStorage.setItem("cartObj", JSON.stringify(cartObj));
 }
 
-ApplyFilter.addEventListener("click", () => {
-  console.log("Hii", PriceRange);
-});
+// ApplyFilter.addEventListener("click", () => {
+//   // console.log("hii", box);
+//   // box.forEach((checkbox) => {
+//   //   console.log(checkbox.checked);
+//   // });
+//   // const selctedprice = document.querySelector("input.priceRange:checked+span");
+//   // var ans = [];
+//   // selctedprice.forEach((item) => {
+//   //   ans.push(item.innerText);
+//   // });
+//   // console.log(ans);

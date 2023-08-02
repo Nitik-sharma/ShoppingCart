@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart</title>
+    <script
+      src="https://kit.fontawesome.com/641bffa6ee.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -17,6 +21,7 @@
       <div class="myShop">
         <h1>MeShop.</h1>
       </div>
+      <div class="link"></div>
       <div class="links">
         <a href="./index.html">Home</a>
         <a href="./login.html">Login</a>
@@ -79,20 +84,37 @@
           <div class="price">
             <h2>Price Range</h2>
 
-            <input type="checkbox" name="" class="priceRange" />
-            $0 to $25
+            <div class="Prange">
+              <div class="input">
+                <input type="checkbox" name="" class="priceRange" id="rs0" />
+                $0 to $25
+              </div>
+              <div class="input">
+                <input
+                  type="checkbox"
+                  name=""
+                  class="priceRange"
+                  id="rs25"
+                /><span>$25 to $50</span>
+              </div>
 
-            <input type="checkbox" name="" class="priceRange" /><span
-              >$25 to $50</span
-            >
-
-            <input type="checkbox" name="" class="priceRange" /><span
-              >$50 to $100</span
-            >
-
-            <input type="checkbox" name="" class="priceRange" /><span
-              >$100 onwards</span
-            >
+              <div class="input">
+                <input
+                  type="checkbox"
+                  name=""
+                  class="priceRange"
+                  id="rs50"
+                /><span>$50 to $100</span>
+              </div>
+              <div class="input">
+                <input
+                  type="checkbox"
+                  name=""
+                  class="priceRange"
+                  id="rs100"
+                /><span>$100 onwards</span>
+              </div>
+            </div>
           </div>
 
           <button id="apply">Apply Filter</button>
